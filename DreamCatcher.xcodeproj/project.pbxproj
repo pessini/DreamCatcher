@@ -13,7 +13,7 @@
 		5686B2D41A8D46BC009815D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5686B2D31A8D46BC009815D9 /* Images.xcassets */; };
 		5686B2D71A8D46BC009815D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5686B2D51A8D46BC009815D9 /* LaunchScreen.xib */; };
 		5686B2E31A8D46BD009815D9 /* DreamCatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B2E21A8D46BD009815D9 /* DreamCatcherTests.m */; };
-		5686B2EE1A8D47CC009815D9 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B2ED1A8D47CC009815D9 /* ListViewController.m */; };
+		569C53441A8D4E6500F018B0 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569C53431A8D4E6500F018B0 /* ListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +38,8 @@
 		5686B2DC1A8D46BD009815D9 /* DreamCatcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DreamCatcherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5686B2E11A8D46BD009815D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5686B2E21A8D46BD009815D9 /* DreamCatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamCatcherTests.m; sourceTree = "<group>"; };
-		5686B2EC1A8D47CC009815D9 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewController.h; path = ../ListViewController.h; sourceTree = "<group>"; };
-		5686B2ED1A8D47CC009815D9 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewController.m; path = ../ListViewController.m; sourceTree = "<group>"; };
+		569C53421A8D4E6500F018B0 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		569C53431A8D4E6500F018B0 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 			children = (
 				5686B2CA1A8D46BC009815D9 /* AppDelegate.h */,
 				5686B2CB1A8D46BC009815D9 /* AppDelegate.m */,
-				5686B2EC1A8D47CC009815D9 /* ListViewController.h */,
-				5686B2ED1A8D47CC009815D9 /* ListViewController.m */,
+				569C53421A8D4E6500F018B0 /* ListViewController.h */,
+				569C53431A8D4E6500F018B0 /* ListViewController.m */,
 				5686B2D01A8D46BC009815D9 /* Main.storyboard */,
 				5686B2D31A8D46BC009815D9 /* Images.xcassets */,
 				5686B2D51A8D46BC009815D9 /* LaunchScreen.xib */,
@@ -221,7 +221,7 @@
 			files = (
 				5686B2CC1A8D46BC009815D9 /* AppDelegate.m in Sources */,
 				5686B2C91A8D46BC009815D9 /* main.m in Sources */,
-				5686B2EE1A8D47CC009815D9 /* ListViewController.m in Sources */,
+				569C53441A8D4E6500F018B0 /* ListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +412,7 @@
 				5686B2E81A8D46BD009815D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5686B2E91A8D46BD009815D9 /* Build configuration list for PBXNativeTarget "DreamCatcherTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				5686B2EB1A8D46BD009815D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
