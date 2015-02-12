@@ -7,12 +7,15 @@
 //
 
 #import "ListViewController.h"
+#import "DetailViewController.h"
 
 @interface ListViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property NSMutableArray *titlesArray;
+@property NSMutableArray *descriptionsArray;
+
 
 @end
 
@@ -22,6 +25,7 @@
     [super viewDidLoad];
 
     self.titlesArray = [NSMutableArray new];
+    self.descriptionsArray = [NSMutableArray new];
 }
 
 - (void)presentDreamEntry
@@ -35,12 +39,24 @@
 
     }];
 
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+
+        textField.placeholder = @"Dream Description";
+        
+    }];
+
     UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
 
     UIAlertAction *saveAction = [UIAlertAction actionWithTitle:@"Save" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
         UITextField *textFieldOne = alertController.textFields[0];
+        UITextField *textFieldTwo = alertController.textFields[1];
+
         [self.titlesArray addObject:textFieldOne.text];
+        [self.descriptionsArray addObject:textFieldTwo.text];
+
         [self.tableView reloadData];
+
     }];
 
     [alertController addAction:cancelAction];
@@ -74,6 +90,16 @@
     cell.textLabel.text = [self.titlesArray objectAtIndex:indexPath.row];
 
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    DetailViewController *detailVC = segue.destinationViewController;
+
+    detailVC.titleString = [self.titlesArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    detailVC.descriptionString = [self.descriptionsArray objectAtIndex:self.tableView.indexPathForSelectedRow.row];
+    
+
 }
 
 @end

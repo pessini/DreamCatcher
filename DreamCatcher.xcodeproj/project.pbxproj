@@ -14,6 +14,7 @@
 		5686B2D71A8D46BC009815D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5686B2D51A8D46BC009815D9 /* LaunchScreen.xib */; };
 		5686B2E31A8D46BD009815D9 /* DreamCatcherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5686B2E21A8D46BD009815D9 /* DreamCatcherTests.m */; };
 		569C53441A8D4E6500F018B0 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569C53431A8D4E6500F018B0 /* ListViewController.m */; };
+		56BA1A641A8D67AF001B8E9E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1A631A8D67AF001B8E9E /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5686B2E21A8D46BD009815D9 /* DreamCatcherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DreamCatcherTests.m; sourceTree = "<group>"; };
 		569C53421A8D4E6500F018B0 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		569C53431A8D4E6500F018B0 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		56BA1A621A8D67AF001B8E9E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		56BA1A631A8D67AF001B8E9E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				5686B2CB1A8D46BC009815D9 /* AppDelegate.m */,
 				569C53421A8D4E6500F018B0 /* ListViewController.h */,
 				569C53431A8D4E6500F018B0 /* ListViewController.m */,
+				56BA1A621A8D67AF001B8E9E /* DetailViewController.h */,
+				56BA1A631A8D67AF001B8E9E /* DetailViewController.m */,
 				5686B2D01A8D46BC009815D9 /* Main.storyboard */,
 				5686B2D31A8D46BC009815D9 /* Images.xcassets */,
 				5686B2D51A8D46BC009815D9 /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				5686B2CC1A8D46BC009815D9 /* AppDelegate.m in Sources */,
 				5686B2C91A8D46BC009815D9 /* main.m in Sources */,
 				569C53441A8D4E6500F018B0 /* ListViewController.m in Sources */,
+				56BA1A641A8D67AF001B8E9E /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
