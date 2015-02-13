@@ -70,9 +70,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Dream Catcher" id="VsE-Sj-UO8">
-                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="Adf-e3-KUd">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="B5T-fG-cFZ">
                             <connections>
-                                <action selector="onEditButtonTaped:" destination="vXZ-lx-hvc" id="IKM-ZW-ERd"/>
+                                <action selector="onEditButtonTapped:" destination="vXZ-lx-hvc" id="UwS-yR-Tam"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="gI6-7X-oeO">

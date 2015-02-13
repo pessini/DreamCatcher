@@ -26,6 +26,13 @@
 
     self.titlesArray = [NSMutableArray new];
     self.descriptionsArray = [NSMutableArray new];
+
+    UIBarButtonItem *editButton = [[UIBarButtonItem alloc] initWithTitle:@"Edit"
+                                             style:UIBarButtonItemStyleDone
+                                            target:self action:@selector(onEditButtonTapped:)];
+    
+    self.navigationItem.leftBarButtonItem = editButton;
+    self.editing = false;
 }
 
 - (void)presentDreamEntry
@@ -75,14 +82,56 @@
 
 - (IBAction)onAddButtonTapped:(UIBarButtonItem *)sender
 {
-
+    
     [self presentDreamEntry];
 }
 
-- (IBAction)onEditButtonTaped:(UIBarButtonItem *)sender
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+
+    return YES;
+
 }
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    NSString *titleItem = [self.titlesArray objectAtIndex:sourceIndexPath.row];
+    [self.titlesArray removeObject:titleItem];
+    [self.titlesArray insertObject:titleItem atIndex:destinationIndexPath.row];
+
+    NSString *descriptionItem = [self.descriptionsArray objectAtIndex:sourceIndexPath.row];
+    [self.descriptionsArray removeObject:descriptionItem];
+    [self.descriptionsArray insertObject:descriptionItem atIndex:destinationIndexPath.row];
+
+    [self.tableView reloadData];
+}
+
+
+- (IBAction)onEditButtonTapped:(UIBarButtonItem *)sender
+{
+
+    if (self.editing) {
+
+        self.editing = false;
+        [self.tableView setEditing:false animated:true];
+        sender.style = UIBarButtonItemStyleDone;
+        sender.title = @"Edit";
+
+    } else {
+
+        self.editing = true;
+        [self.tableView setEditing:true animated:true];
+        sender.style = UIBarButtonItemStyleDone;
+        sender.title = @"Done";
+
+    }
+}
+
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
